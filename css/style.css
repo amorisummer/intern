@@ -106,9 +106,7 @@ a:hover {
 
 .main-content {
     margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 40px;
-    padding-top: 200px;
+    padding-top: 140px;
     padding-bottom: 100px;
 }
 
@@ -117,7 +115,7 @@ a:hover {
    /* grid-template-columns: minmax(200px, 440px) 1fr;*/
    justify-content: space-between;
     grid-column-gap: 40px;
-    margin-bottom: 120px;
+    margin-bottom: 50px;
 }
 
 #header h1 {
@@ -203,7 +201,7 @@ li {
 .apply-button {
     box-sizing: border-box;
     background-color: white;
-    color: #2D2B36;
+    color: #884FE5;
     border: solid 2px transparent;
     border-radius: 50px;
     padding: inherit;
@@ -230,13 +228,6 @@ li {
 .apply-button:hover {
     background-color: transparent;
     color: white;
-    font-color: white;
-}
-
-
-.apply-button-content{
-    font-size: 1rem;
-    color: #884FE5;
 }
 
 
@@ -282,16 +273,19 @@ li {
     color: white;
 }
 
-
 .app-store-content{
     font-size: 1rem;
     margin: 0px;
 }
 
-.app-store-content1 {
-    font-size: 1.2rem;
-    margin: 0px;
+.app-store-content::before,
+.app-store-content1::before {
+    font-family: "Icofont";
+    margin-right: 10px;
+    margin-top: -2px;
+    content: "\e8a7";
 }
+
 
 .apple-store {
     font-size: 1.2em
@@ -308,41 +302,51 @@ li {
 .step-left,
 .step-right {
     display: inline-grid;
-    margin: auto;
-    margin-bottom: 144px;
+    margin-bottom: 60px;
     grid-template-columns: 500px 1fr;
     grid-column-gap: 56px;
     text-align: left;
 }
+
+
 .step-right {
     grid-template-columns: 1fr 500px;
 }
 #step1 {
-    max-width: 280px;
+    max-width: 500px;
 }
 
 #step2 {
-    max-width: 460px;
+    max-width: 500px;
 }
 
 #step3 {
-    max-width: 400px;
+    max-width: 500px;
 }
 
 #step4 {
-    max-width: 350px;
+    max-width: 500px;
 }
 
 #step5 {
-    max-width: 450px;
+    max-width: 500px;
 }
 
-.stepname {
-    margin-top: 40px;
+.stepname-left {
+    margin-top: 80px;
+    grid-template-columns: max-content 1fr;
+    font-size: 2em;
+    font-weight: 600;
+    margin-right: 70px;
+}
+
+.stepname-right {
+    margin-top: 80px;
     display: grid;
     grid-template-columns: max-content 1fr;
     font-size: 2em;
     font-weight: 600;
+    margin-left: 70px;
 }
 
 .stepnumber {
@@ -356,21 +360,117 @@ li {
     margin-right: 24px;
 }
 
-.steptext {
-    margin-top: 8px;
+.steptext1 {
+    font-size: 1.55em;
 }
 
-.stepdescription {
+.steptext {
+    margin-top: 25%;
+    font-size: 1.55em;
+}
+
+.purpletext {
+    color: #A946F3;
+}
+
+.stepdescription-left {
+    color: #6c6c6c;
     font-size: 1.5em;
     font-weight: 400;
     margin-top: 16px;
-    margin-left: 80px;
+    margin-right: 70px;
+}
+
+.stepdescription-right {
+    color: #6c6c6c;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 16px;
+    margin-left: 70px;
 }
 
 #full-width-image {
     height: auto;
     width: 100%; 
 }
+/* about amori on about page description */
+#about-amori-grid {
+    max-width: 1300px;
+    margin: auto;
+    margin-bottom: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    text-align: left;
+    grid-row-gap: 30px;
+}
+
+#about-amori-cell {
+    padding-top: 50px;
+    padding-left: 40px;
+}
+
+#iphones-vertical-cell {
+    padding-left: 20px;
+    margin-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#about-amori-button-container {
+    display: flex;
+    margin-top: 30px;
+}
+
+#download-button-about-amori {
+    width: 240px;
+    margin-right: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+}
+
+#learn-button-about-amori {
+    width: 170px;
+    margin-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+}
+
+#download-button-about-amori {
+    box-sizing: border-box;
+    background-image: linear-gradient(76deg, #B143F6, #884FE5);
+    color: white;
+    border: solid 2px transparent;
+    border-radius: 50px;
+    transition: 0.3s;
+    background-size: 800% 800%;
+    -webkit-animation: gradient 16s ease infinite;
+    animation: gradient 16s ease infinite alternate
+}
+
+
+#apply-button-filled-purple {
+    box-sizing: border-box;
+    border-radius: 50px;
+    padding: inherit;
+    position: relative;
+    font-size: 0.65rem;
+    width: 180px;
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: linear-gradient(76deg, #B143F6, #884FE5);
+    color: white;
+    border: solid 2px transparent;
+    border-radius: 50px;
+    transition: 0.3s;
+    background-size: 800% 800%;
+    -webkit-animation: gradient 16s ease infinite;
+    animation: gradient 16s ease infinite alternate
+}
+
 
 /* mission description */
 #mission-description {
@@ -403,11 +503,16 @@ li {
     margin-top: 0px;
 }
 
+.description-cell img {
+    margin-top: 0px;
+    max-width: 100%;
+    height: auto;
+  }
 
-/* mail */
-#mail, #mission {
+/* linear gradient */
+#mail, #mission, #about-amori-div {
     margin: auto;
-    padding-top: 120px;
+    padding-top: 100px;
     width: 100%;
     background: rgb(240,242,255);
     background: linear-gradient(0deg, rgba(240,242,255,0) 0%, rgba(240,242,255,1) 100%);
@@ -492,12 +597,53 @@ li {
 
 }
 
-/* mission page */
+/* main header */
+#main-header {
+    text-align: center;
+}
+
+#apply-text {
+    font-size: 1.3rem;
+}
+
+#join-text {
+    margin-bottom: 20px;
+}
+
+#main-header-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#main-header-button-container-about-pg {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+#learn-button-main-header {
+    font-size: 0.65rem;
+    width: 180px;
+    margin-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#apply-button-main-header {
+    font-size: 0.65rem;
+    width: 180px;
+    margin-left: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/* mission header */
 #mission-header {
     text-align: center;
     max-width: 800px;
     margin: auto;
-
 }
 
 #mission-header p {
@@ -956,6 +1102,7 @@ body {
     max-width: 600px;
     }
 
+
 #step1, #step2, #step3, #step4, #step5 {
     order: -1;
     margin: auto;
@@ -969,17 +1116,6 @@ body {
 
 #step5 {
     max-width: 360px;
-}
-
-.stepnumber {
-    width: 48px;
-    height: 48px;
-    padding-top: 6px;
-    margin-right: 20px;
-}
-
-.stepdescription {
-    margin-left: 70px;
 }
 
 #testimonials {
@@ -1043,6 +1179,11 @@ body {
     margin-bottom: 32px;
 }
 
+#iphones-vertical {
+    max-width: 100%;
+    height: auto;
+}
+
 #mission-header {
     padding-bottom: 80px;
 }
@@ -1056,4 +1197,33 @@ body {
 }
 
 
+  }
+
+  /* carousel code */
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slide-container {
+    display: flex;
+    width: calc(10 * 530);
+    animation: slide 15s linear infinite;
+  }
+  
+  .slide {
+    width: 530px;
+    height: auto;
+    padding: 10px;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-5 * 530px));
+    }
   }
